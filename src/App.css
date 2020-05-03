@@ -23,16 +23,42 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.headnav a{
+  color: white;
+  background-color: grey;
+  margin: 20px;
+  
+}
+.headnav .active{
+  color: white;
+  background: #da973d;
+}
+.headnav a:hover{
+  text-decoration: none;
+  color: #b32d0d;
+  transform: scale(1.03);
+  transition: 0.5s all;
+}
+.footer{
+    background-color: thistle;
+    padding: 1em 0;
+}
+.footer ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer ul li{
+  margin: 0 1em;
+}
+.footer ul li a{
+  color: black;
+  font-size: 1.1em;
+}
+.footer ul li a:hover{
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.maindiv:focus{
+  background-color: lawngreen;
 }
