@@ -105,7 +105,9 @@ class ContactUs extends Component {
             ...updateFormArray[inputIdentifier]
         }
         updateValue.value = e.target.value;
-        updateValue.valid = this.checkValidity(updateValue.value , updateValue.validation);
+        if(updateValue.valid){
+            updateValue.valid = this.checkValidity(updateValue.value , updateValue.validation);
+        }
         console.log(updateValue, "updte");
         updateFormArray[inputIdentifier] = updateValue;
         this.setState({

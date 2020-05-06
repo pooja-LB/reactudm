@@ -1,6 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import * as actionTypes from '../store/actionTypes';
+import {STORE_RESULT, DELETE_RESULT} from "../store/actions/resultsAction";
+import {INCREMENT, DECREMENT, ADD, SUB} from "../store/actions/counterAction";
+
 
     const Sidebar = (props) => {
       return (
@@ -46,12 +49,12 @@ const mapStateToProps = state =>{
 
 const mapDispatchToProps = dispatch => {
   return{
-    increment : () => dispatch({type: actionTypes.INCREMENT}),
-    decrement : () => dispatch({type: actionTypes.DECREMENT}),
-    add : () => dispatch({type: actionTypes.ADD, payload: 10}),
-    sub : () => dispatch({type: actionTypes.SUB, payload: 10}),
-    storeResult : (result) => dispatch({type: actionTypes.STORE_RESULT , payload:result}),
-    deleteResult : (id) => dispatch({type: actionTypes.DELETE_RESULT , payload: id})
+    increment : () => dispatch(INCREMENT()),
+    decrement : () => dispatch(DECREMENT()),
+    add : () => dispatch(ADD(10)),
+    sub : () => dispatch(SUB(10)),
+    storeResult : (result) => dispatch(STORE_RESULT(result)),
+    deleteResult : (id) => dispatch(DELETE_RESULT(id))
   };
 
 };
