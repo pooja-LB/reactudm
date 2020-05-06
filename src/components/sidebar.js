@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actionTypes from '../store/actionTypes';
 import {STORE_RESULT, DELETE_RESULT} from "../store/actions/resultsAction";
 import {INCREMENT, DECREMENT, ADD, SUB} from "../store/actions/counterAction";
 

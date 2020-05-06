@@ -20,10 +20,11 @@ class Layout extends Component {
     return (
       <div>
            <div className="d-flex flex-wrap justify-content-center headnav">
-                {this.state.dashEvents.map((events) => (
-                   <NavLink exact to={{
+                {this.state.dashEvents.map((events, index) => (
+                   <NavLink exact key={index} to={{
                        pathname: events.path
-                   }}>  <div className="text-center m-2 pt-4 pb-4 pl-2" style={{width: '200px'}}>
+                   }}>  
+                   <div className="text-center m-2 pt-4 pb-4 pl-2" style={{width: '200px'}}>
                         <strong> {events.name}</strong>
                     </div> </NavLink>
                 ))}

@@ -23,9 +23,9 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 results : newArray
             }
+            default:
+                return state;
     }
-
-    return state;
 };
 
 export default reducer;

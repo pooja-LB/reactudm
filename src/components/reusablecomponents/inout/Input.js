@@ -1,5 +1,4 @@
 import React from 'react';
-import classes from  './input.css';
   
     const Input = (props) =>{
 
@@ -16,8 +15,8 @@ import classes from  './input.css';
             case('select'):
             inputElement = ( <select className="InputElement" style={{padding: '4px'}} {...props.elementconfig} value={props.value} onChange={props.changed}>
                 { 
-                props.elementconfig.options.map(option => (
-                     <option value={option.value}> 
+                props.elementconfig.options.map((option, index )=> (
+                     <option value={option.value} key={index}> 
                      {option.displayValue}
                      </option>
                 ))}
